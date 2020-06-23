@@ -1,0 +1,29 @@
+﻿@model Fabrikam_MVCv2.Models.BlogPost
+@{
+    ViewBag.Title = "Admin";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Admin</h2>
+
+@using (Html.BeginForm("CreatePost", "Admin"))
+{
+<div class="form-control">
+    <div class="form-group row">
+        @Html.LabelFor(m => m.Title, new { @style = "color: #ffffff" })
+        @Html.TextBoxFor(m => m.Title, new { @id = "Title" })
+    </div>
+    <div class="form-group row">
+        @Html.LabelFor(m => m.Author, new { @style = "color: #ffffff" })
+        @Html.TextBoxFor(m => m.Author, new { @id = "Author" })
+    </div>
+    <div class="form-group-lg row">
+        @Html.LabelFor(m => m.Body, new { @style = "color: #ffffff" })
+        @Html.TextAreaFor(m => m.Body, new { @id = "Body", @class = "form-control rounded-0", @rows = "10", @style = "width: 40%" })
+    </div>
+    <div class="post-submit">
+        <input type="submit" runat="server" class="btn btn-primary" />
+    </div>
+</div>
+    
+}

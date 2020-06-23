@@ -1,0 +1,144 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container">
+    <div class="content">
+        <h1 style="color: #ffffff">Fabrikam University<img src="~/images/fab_logo.PNG" alt="School logo" /></h1>
+        <div class="page-links">
+            @Html.ActionLink("College of Computing and Digital Music", "Computing_Digital_Music", "Index")
+            @Html.ActionLink("College of Education", "Education", "Index")
+            @Html.ActionLink("College of Law", "Law", "Index")
+            @Html.ActionLink("College of Music", "Music", "Index")
+        </div>
+        <div class="below-links">
+            <div class="rotator-about">
+                <div class="image-rotator">
+                    <div class="slider-container">
+                        <ul class="slider">
+                            <li style="background-image: url(~/images/Arts.png);">
+                                <img src="~/images/Arts.png"/>
+                            </li>
+                            <li style="background-image: url(~/images/Volleyball.png);">
+                                <img src="~/images/Volleyball.png" />
+                            </li>
+                            <li style="background-image: url(~/images/Large_Building.jpg);">
+                                <img src="~/images/Large_Building.jpg" />
+                            </li>
+                            <li style="background-image: url(~/images/Lecture.jpg);">
+                                <img src="~/images/Lecture.jpg" />
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="Radios">
+                        <input type="radio" name="rad" />
+                        <input type="radio" name="rad" />
+                        <input type="radio" name="rad" />
+                        <input type="radio" name="rad" />
+                    </div>
+                </div>
+                <div class="about">
+                    <h2 style="color: #ffffff">About Fabrikam</h2>
+                    <p>
+                        The company was founded in Austin, Texas in August 1997 by Bryan Menell. The first angel investors in the company were Steve Papermaster and David Lundeen. The company secured its first channel partnership with Vignette, a provider of content management systems.
+                        The company held its initial public offering (IPO) on July 29, 1999. In December 1999, the company completed its first acquisition of LoreData based in New London, Connecticut. In May 2000, Perficient acquired Compete, Inc.[9]
+                        In 2001, Vertecon Inc. was acquired.[10]
+                        Jack McDonald became CEO of Perficient in 1999 and chairman in 2001. McDonald served in both positions until 2009.[11] Lori Hawkins of Statesman noted that during McDonald's tenure, Perficient "grew from eight employees to more than 1,200 worldwide and had annual sales of $200 million."[12] According to the St. Louis Business Journal in August 2009, "during the second quarter, Perficient lost $196,000 on $44.9 million in revenue, compared with a $3.9 million profit on $59.1 million in revenue during the same period last year" (in 2008).[13]
+                        Jeffrey Davis became Perficient's COO in 2001 and president in 2003.[14] Davis was named CEO in September 2009.[13]
+                        During Davis' tenure as CEO, the firm transitioned from the Nasdaq SmallCap Market to the Nasdaq Global Select Market.[6] By 2014, Davis had helped[how?] Perficient buy 13 companies in deals worth a combined $232.3 million since taking over as CEO in 2009.[15]
+                        In 2011, Perficient acquired business and management consulting firm Exervio for $13.6 million.[16] In 2012, Perficient acquired PointBridge Solutions, LLC for $22 million.[17] Perficient then acquired services and technology consulting firm Nascent Systems LP in July, 2012.[18] Also in 2012, Perficient acquired Northridge Systems.
+                    </p>
+                </div>
+            </div>
+            <div class="far-right">
+                <div class="classes">
+                    <h2 style="color: #ffffff">Classes</h2>
+                    <table>
+                        <tr>
+                            <th>School</th>
+                            <th>Class #</th>
+                            <th>Open Spots</th>
+                        </tr>
+                        <tr>
+                            <td>COE</td>
+                            <td>12345</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>CDM</td>
+                            <td>12345</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>COL</td>
+                            <td>12345</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>COM</td>
+                            <td>12345</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>COL</td>
+                            <td>12345</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>COE</td>
+                            <td>12345</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>COE</td>
+                            <td>12345</td>
+                            <td>4</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="BlogDropdown">
+                    <script>/* When the user clicks on the button, 
+                        toggle between hiding and showing the dropdown content */
+                        function myFunction() {
+                            document.getElementById("myDropdown").classList.toggle("show");
+                        }
+
+                        // Close the dropdown menu if the user clicks outside of it
+                        window.onclick = function (event) {
+                            if (!event.target.matches('.dropbtn')) {
+                                var dropdowns = document.getElementsByClassName("dropdown-content");
+                                var i;
+                                for (i = 0; i < dropdowns.length; i++) {
+                                    var openDropdown = dropdowns[i];
+                                    if (openDropdown.classList.contains('show')) {
+                                        openDropdown.classList.remove('show');
+                                    }
+                                }
+                            }
+                        } </script>
+                    <button onclick="myFunction()" class="dropbtn">Blogs</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        @Html.ActionLink("Admin", "SignIn", "Admin")
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <img src="~/images/UGA_North_Campus.jpg" alt="Campus" />
+        <div class="sidebar-content">
+            <p>Register for:</p>
+            <p>Clubs</p>
+            <p>Pay my bill</p>
+            <p>Campuses</p>
+            <p>Contact us</p>
+        </div>
+        <img src="~/images/otter_mascot.jpg" alt="Fabrikam Logo" />
+    </div>
+</div>
+
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/script.js"></script>
